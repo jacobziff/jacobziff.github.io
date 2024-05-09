@@ -1,0 +1,517 @@
+/* Website Colors */
+/* :root {
+    --bg-color: #0F1729;
+    --secondary-bg-color: #011936;
+    --main-text-color: #c9d1c9;
+    --text-heading-color: #ccd8e0;
+    --text-heading-color-2: #bdc9d0;
+    --main-color-vibrant: #4EA5D9;
+    --main-color-neutral: #ADD8E6;
+    --alternative: #2ECC51;
+    --maize: #FFCB05;
+} */
+
+:root {
+    --bg-color: #010b13;
+    --secondary-bg-color: #1E1B18;
+    --main-text-color: #E0E0E0;
+    --text-heading-color: #E0E0E0;
+    --text-heading-color-2: #E0E0E0;
+    --main-color-vibrant: #00a1ff;
+    --main-color-neutral: #4e9ac1;
+    --alternative: #2ECC51;
+    --maize: #FFCB05;
+}
+
+* {
+    background: 0;
+    color: var(--main-text-color);
+    z-index: 3;
+    font-family: "Titillium Web", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+canvas {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+img {
+    border: solid 2px var(--main-color-neutral);
+    border-radius: 7px;
+    margin-bottom: 10px;
+}
+
+.socialscontainer {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 50%;
+}
+
+.socials, .footericon {
+    border: 0;
+    width: 60%;
+    filter: invert(70%);
+}
+
+.skip-to-main {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 71px;
+    font-weight: 700;
+    /* font-family: "Noto Sans", sans-serif; */
+    font-family: "Rubik", sans-serif;
+    margin-top: 50px;
+    color: var(--text-heading-color);
+    text-shadow: 0 1px 4px var(--main-color-vibrant);
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: var(--text-heading-color-2); 
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+p {
+    line-height: 150%;
+    margin-bottom: 10px;
+    margin-right: 4%;
+    font-weight: 300;
+    font-size: large;
+}
+
+#endinfo {
+    font-size: medium;
+    opacity: 0.8;
+}
+
+.selfdescription {
+    font-family: "IBM Plex Serif", serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#aboutinfo {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+#aboutinfo > :not(img) {
+    order: 1;
+}
+
+.expinfo1 > h3 {
+    margin-top: 10px;
+}
+
+.expinfo1 > h3 {
+    margin-top: 50px;
+}
+
+.expinfo2 > h3 {
+    margin-top: 20px;
+}
+
+li {
+    font-size: 30px;
+}
+
+.section {
+    padding: 50px 0 50px 0;
+}
+
+header {
+    display: grid;
+}
+
+.skip-to-main:focus {
+    position: static;
+    width: 30%;
+    height: 50px;
+    padding: 10px 5px;
+    margin-left: 35%;
+    text-align: center;
+    font-size: 25px;
+    background-color: var(--secondary-bg-color);
+    border: solid 2px var(--main-color-vibrant);
+    border-radius: 7px;
+    margin-top: 60px;
+}
+
+.formcontainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-right: 4%;
+    margin-top: 25px;
+}
+
+.formcontainercontainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.formcontainer > * {
+    margin-bottom: 20px;
+    align-self: center;
+}
+
+.shortinput {
+    height: 70px;
+    width: 90%;
+    padding: 0 10px;
+}
+
+.longinput {
+    height: 265px;
+    width: 90%;
+    padding: 20px 10px;
+}
+
+.shortinput, .longinput {
+    font-size: large;
+}
+
+.formshort {
+    grid-column: 1 / 2;
+}
+
+.labeldesc {
+    clip-path: inset(50%);
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+}
+
+.asterisk {
+    font-weight: 600;
+}
+
+button {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 140px;
+    height: 60px;
+    font-size: 170%;
+    border: solid 2px var(--main-color-neutral);
+    border-radius: 7px;
+    background-color: var(--secondary-bg-color);
+}
+
+button:hover {
+    font-weight: 600;
+}
+
+.formlabel {
+    font-size: large;
+}
+
+footer > * {
+    text-align: center;
+}
+
+.sidelink, .footerlink, .projlink, .contactlink {
+    font-family: "Arimo", sans-serif;
+    text-decoration: none;
+    background:
+    linear-gradient(
+        to right,
+        var(--main-color-neutral),
+        var(--main-color-neutral)
+      ),
+      linear-gradient(
+        to right,
+        var(--alternative),
+        var(--main-color-vibrant)
+    );
+    background-size: 100% 5%, 0 5%;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
+}
+
+.sidelink:hover, .footerlink:hover, .projlink:hover, .contactlink:hover {
+    background-size: 0 5%, 100% 5%;
+}
+
+.umich:hover {
+    color: var(--maize);
+}
+
+input, textarea {
+    background-color: var(--secondary-bg-color);
+    border-radius: 10px;
+    text-wrap: wrap;
+    border: solid 2px var(--main-color-neutral);
+}
+
+textarea {
+    resize: none;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    z-index: 4;
+}
+
+.sidebar > * {
+    align-self: center;
+}
+
+.socialscontainer {
+    z-index: 3;
+}
+
+.footericonscontainer {
+    margin: 50px 0 150px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.footericoninfo > p {
+    text-align: center;
+}
+
+.footericon {
+    width: 30%;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sidelink {
+    font-size: 80%;
+}
+
+.projectscontainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.proj {
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.proj > * {
+    align-self: center;
+    justify-self: center;
+}
+
+main {
+    margin-left: 5%;
+}
+
+.navbar {
+    left: 5%;
+    right: 5%;
+    top: 2%;
+}
+
+.proj, .socialscontainer {
+    position: relative;
+    z-index: 2;
+}
+
+#formvalidation {
+    color: var(--main-color-vibrant);
+    font-weight: 500;
+}
+
+.lightbox-projects {
+    justify-items: center;
+}
+
+@media all and not (prefers-reduced-motion: reduce) {
+    img {
+        transition: width 500ms;
+    }
+
+    .socials:hover {
+        width: 70%;
+    }
+
+    .footericon:hover {
+        width: 40%;
+    }
+    
+    .lightbox-projects > img:hover {
+        width: 350px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+
+    .footerlink:first-child {
+        display: none;
+    }
+
+    .sidelink {
+        font-size: 100%;
+    }
+
+    .navbar {
+        position: static;
+        flex-direction: column;
+    }
+
+    #aboutinfo {
+        display: grid;
+        grid-template-columns: 2fr 1.5fr;
+        align-items: center;
+        justify-items: center;
+    }
+
+    #aboutinfo > * {
+        order: 1;
+    }
+
+    img {
+        width: 60%;
+        max-height: 400px;
+    }
+
+    .sidebar {
+        height: 100%;
+        width: 35%;
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+    }
+
+    .sidebar > * {
+        margin-left: 15%;
+        align-self: flex-start;
+    }
+    
+    main {
+        margin-left: 35%;
+        padding: 0px 10px;
+    }
+
+    footer {
+        margin-left: 35%;
+    }
+
+    .proj {
+        grid-template-columns: 0.5fr 1fr;
+    }
+
+    .proj > * {
+        align-self: center;
+        justify-self: left;
+        order: 1;
+    }
+
+    .lightbox-projects {
+        order: 2;
+        grid-column: 1 / -1;
+        margin-left: 20%;
+    }
+
+    #mainlink {
+        display: none;
+    }
+
+    .skip-to-main:focus {
+        position: static;
+        height: 30%;
+        margin-left: 36%;
+        display: inline;
+        vertical-align: middle;
+        padding: 10px 20px;
+    }
+
+    .formcontainer {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .formlong {
+        grid-column: 2 / -1;
+        grid-row: 1 / 4;
+    }
+
+    @media all and not (prefers-reduced-motion: reduce) {
+        .socials:hover {
+            width: 70%;
+        }
+        
+        .lightbox-projects > img:hover {
+            width: 70%;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .proj {
+        grid-template-columns: 0.3fr 0.5fr 1fr;
+    }
+
+    .proj > * {
+        order: 0;
+    }
+
+    .lightbox-projects {
+        grid-column: 2 / span 1;
+    }
+
+    .lightbox-projects > img {
+        width: 80%;
+    }
+
+    .lightbox-projects > img:hover {
+        width: 90%;
+    }
+}
+
+@media all and (prefers-reduced-motion: reduce) {
+    .sidelink, .footerlink, .projlink, .contactlink {
+        transition: background-size 0ms;
+    }
+}
+
+footer {
+    z-index: 100;
+    height: 400px;
+    font-family: "Titillium Web", sans-serif;
+}

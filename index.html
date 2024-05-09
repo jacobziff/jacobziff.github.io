@@ -1,11 +1,191 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testing</title>
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="js/lightbox/dist/css/lightbox.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <title>Jacob Ziff</title>
+    <link rel="icon" type="image/x-icon" href="https://j-ziff.github.io/jacobziff/images/assets/favicon.ico">
 </head>
 <body>
-    <h1>Hello World!</h1>
+    <canvas aria-hidden="true"></canvas>
+    <header>
+        <a class = "skip-to-main" href = "#main">Skip to Main Content</a>
+        
+        <div class = "sidebar">
+            <div id = "home">
+                <h1>Jacob Ziff</h1>
+                <h2 class = "selfdescription">Student at the <a class = "umich">University of Michigan</a></h2>
+            </div>
+            <nav>
+                <ul class = "navbar">
+                    <li class = "navlink"><a class = "sidelink" id = "mainlink" href = "#home">Home</a></li>
+                    <li class = "navlink"><a class = "sidelink" id = "aboutlink" href = "#about">About</a></li>
+                    <li class = "navlink"><a class = "sidelink" id = "explink" href = "#experience">Experience</a></li>
+                    <li class = "navlink"><a class = "sidelink" id = "projlink" href = "#projects">Projects</a></li>
+                    <li class = "navlink"><a class = "sidelink" id = "contactlink" href = "#contact">Contact</a></li>
+                    <li class = "navlink"><a class = "sidelink" id = "resumelink" href = "https://drive.google.com/file/d/164TaQH5rBcRymhlUJoD9m6DKCiRckJ5c/view?usp=sharing" target = "_blank">Resume</a></li>
+                </ul>
+            </nav>
+            <div class = "socialscontainer">
+                <a href = "https://www.linkedin.com/in/ziff/" target = "_blank"><img src = "images/linkedinicon.png" width = 50 class = "socials" alt = "A gray LinkedIn logo."></a>
+                <a href = "https://github.com/j-ziff" target = "_blank"><img src = "images/githubicon.png" width = 50 class = "socials" alt = "A gray Github logo."></a>
+                <a href = "https://leetcode.com/u/jz1/" target = "_blank"><img src = "images/leetcodeicon.png" width = 50 class = "socials" alt = "A gray Leetcode logo."></a>
+            </div>
+        </div>
+
+    </header>
+    <main id = "main">
+        <div id = "about" class = "section">
+            <h2>About Me</h2>
+            <div id = "aboutinfo">
+                <div>
+                    <p>Hello! I am a Computer Science Student in the University of Michigan's class of 2025. In particular, I enjoy working with software. Although I do not have a niche beyond that, I look forward to exploring the broad field of Computer Science! I aim to establish a solid foundation with the courses and activities that I am currently doing so that I can be the best version of myself down the road.</p>
+                    <p>My strengths are my curiosity, consistency, and organization. I am always trying to learn new things, and I love asking questions. My satisfaction comes from not just knowing enough to pass an exam, but having in-depth knowledge of a subject that can allow me to grow as a person. My strategy is to always ensure that I am always putting in effort. I believe that consistent effort adds up over time, and that success is not built overnight. I plan my actions far in advance and keeping myself organized and putting in effort leads me to my successes.</p>
+                </div>
+                <img src = "images/profilepicture.jpg" width = 300 alt = "A picture of me!">
+            </div>
+        </div>
+
+        <div id = "experience" class = "section">
+            <h2>Work Experience</h2>
+
+            <div class = "expcontainer">
+
+                <div class = "exp">
+                    <div class = "expinfo1">
+                        <h3>Future of Programming Lab</h3>
+                        <p>May 2024 - Present</p>
+                    </div>
+                    <div class = "expinfo2">
+                        <h3>Researcher</h3>
+                        <p>Performed research on modern programming languages by contributing to the Hazel language. Hazel is a live functional programming environment that is able to understand, manipulate, and even run incomplete programs.</p>
+                    </div>
+                </div>
+
+                <div class = "exp">
+                    <div class = "expinfo1">
+                        <h3>KUKA Robotics</h3>
+                        <p>May 2023 - August 2023</p>
+                    </div>
+                    <div class = "expinfo2">
+                        <h3>Software Design Intern</h3>
+                        <p>Created and tested virtual commissioning environments to satisfy automotive production safety requirements. This involved simulation of production processes using special software. Additionally created side projects such as Github documentation and an internal organization tool in order to increase departmental productivity.</p>
+                    </div>
+                </div>
+
+                <div class = "exp">
+                    <div class = "expinfo1">
+                        <h3>Michigan Language Assessment</h3>
+                        <p>May 2022 - August 2022</p>
+                    </div>
+                    <div class = "expinfo2">
+                        <h3>Clerk</h3>
+                        <p>Conducted internet research and organized databases for furthering marketing outreach efforts. This was done through various tasks involving both research to find contact information and data entry using Salesforce.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id = "projects" class = "section">
+            <h2>Projects</h2>
+            <div class = "projectscontainer">
+
+                <div class = "proj">
+                    <h3><a class = "">Scheme Parser and Evaluator</a></h3>
+                    <a class="lightbox-projects" href="https://j-ziff.github.io/jacobziff/images/schemelogo.png" data-lightbox="projects" data-title="Scheme Parser and Evaluator" data-alt = "The logo for the functional programming language 'Scheme.'"><img src = "images/schemelogo.png" width = 300 alt = "The logo for the functional programming language 'Scheme.'"></a>
+                    <p>Created a lexer and parser for the Scheme programming language. Used this output in a metacircular evaluator for the same language that allowed for programs to be run with the additional distinction of static and dynamic scope.</p>
+                </div>
+
+                <div class = "proj">
+                    <h3><a class = "">Processor Simulator</a></h3>
+                    <a class="lightbox-projects" href="https://j-ziff.github.io/jacobziff/images/lc2k.png" data-lightbox="projects" data-title="Processor Simulator" data-alt = "The datapath for the academic language 'LC2K.'"><img src = "images/lc2k.png" width = 300 alt = "The datapath for the academic language 'LC2K.'"></a>
+                    <p>Began with an assembler and simulator for a custom assembly language. Expanded to a more advanced assembler, as well as a linker. Added a pipelined datapath as well as data and memory cache simulators for completeness of simulation.</p>
+                </div>
+
+                <div class = "proj">
+                    <h3><a class = "">SQL Clone</a></h3>
+                    <a class="lightbox-projects" href="https://j-ziff.github.io/jacobziff/images/sqllogo.png" data-lightbox="projects" data-title="SQL Clone" data-alt = "The logo for the SQL language."><img src = "images/sqllogo.png" width = 300 alt = "The logo for the SQL language."></a>
+                    <p>Created a relational database supporting data entry and queries through command-line interaction. Commands supported include creation, insertion, removal, printing, deletion, and joining.</p>
+                </div>
+
+                <div class = "proj">
+                    <h3><a class = "">Euchre</a></h3>
+                    <a class="lightbox-projects" href="https://j-ziff.github.io/jacobziff/images/euchrehand.png" data-lightbox="projects" data-title="Euchre" data-alt = "A  hand of five playing cards which would be the best possible in the card game 'Euchre.'"><img src = "images/euchrehand.png" width = 300 alt = "A hand of five playing cards which would be the best possible in the card game 'Euchre.'"></a>
+                    <p>Designed a playable version of the card game 'Euchre.' The game uses a slightly modified ruleset and involves both human and simple AI players.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div id = "contact" class = "section">
+            <h2>Contact Me</h2>
+            <p>Email: <a class = "contactlink" href = "mailto:jziff@umich.edu">jziff@umich.edu</a> || <a class = "contactlink" href = "mailto:jacobmziff@gmail.com">jacobmziff@gmail.com</a></p>
+            <p>Phone: <a class = "contactlink" href = "tel:480-544-3067">480-544-3067</a></p>
+            <p>I can be reached through email, phone, or by using the form below:</p>
+            <p id = "formvalidation"></p>
+            <div class = "formcontainercontainer">
+                <form action="https://formspree.io/f/xoqgpjre" method="POST" class = "formcontainer" id = "contactform" onsubmit="alert('Submitted');" target = "dummyframe">
+                    <label class = "formlabel formshort">
+                        <span class = "labeldesc">Your Name <span class = "asterisk">*</span></span><input type="text" class = "shortinput" name="name" form = "contactform" value = "Name *">
+                    </label>
+                    <label class = "formlabel formshort">
+                        <span class = "labeldesc">Your Email <span class = "asterisk">*</span></span><input type="email" class = "shortinput" name="email" form = "contactform" value = "Email *">
+                    </label>
+                    <label class = "formlabel formshort">
+                        <span class = "labeldesc">Your Phone</span><input type="tel" class = "shortinput" name="number" form = "contactform" value = "Phone" pattern = "\(?\d{3}\)?(-|\s)\d{3}-\d{4}">
+                    </label>
+                    <label class = "formlabel formlong">
+                        <span class = "labeldesc">Your Message<span class = "asterisk">*</span></span><textarea class = "longinput" form = "contactform">Message *</textarea>
+                    </label>
+                </form>
+                <button class = "formsubmit">Send</button>
+                <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class = "footericonscontainer">
+            <div class = "footericoninfo">
+                <a href = "https://drive.google.com/file/d/164TaQH5rBcRymhlUJoD9m6DKCiRckJ5c/view?usp=sharing" target = "_blank"><img src = "images/pdffileicon.png" width = 50 class = "footericon" alt = "A gray PDF logo."></a>
+                <p>View my Resume!</p>
+            </div>
+            <div class = "footericoninfo">
+                <a href = "https://www.instagram.com/jacobziff/" target = "_blank"><img src = "images/instagramicon.png" width = 50 class = "footericon" alt = "A gray Instagram logo."></a>
+                <p>Reach out via social media!</p>
+            </div>
+            <div class = "footericoninfo">
+                <a href = "mailto:jziff@umich.edu" target = "_blank"><img src = "images/emailicon.png" width = 50 class = "footericon" alt = "A gray email envelope logo."></a>
+                <p>Reach out via email!</p>
+            </div>
+        </div>
+        <p><a class = "footerlink" href = "#main">Home</a><a class = "inbetweenfooterlink"> | </a>
+            <a class = "footerlink" href = "#about">About</a> | 
+            <a class = "footerlink" href = "#experience">Experience</a> | 
+            <a class = "footerlink" href = "#projects">Projects</a> | 
+            <a class = "footerlink" href = "#contact">Contact</a> | 
+            <a class = "footerlink" href = "https://drive.google.com/file/d/164TaQH5rBcRymhlUJoD9m6DKCiRckJ5c/view?usp=sharing" target = "_blank">Resume</a></p>
+        <p id = "endinfo">&copy; Copyright Jacob Ziff 2024</p>
+    </footer>
+    <script src="js/background.js"></script>
+    <script src="js/name.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/navbarmobile.js"></script>
+    <script src="js/lightbox/dist/js/lightbox-plus-jquery.js"></script>
+    <script>
+        lightbox.option({
+            'wrapAround' : true,
+            'imageFadeDuration' : 300,
+            'fadeDuration' : 500
+        })
+    </script>
+    <script src="js/form.js"></script>
 </body>
 </html>
