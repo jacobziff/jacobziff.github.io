@@ -1,3 +1,11 @@
+/*
+    Hey, you're peeking inside my website!
+    All work in this file is my own.
+
+    Created by Jacob Ziff in 2024.
+    Originally a final project for SI 339 at the University of Michigan,
+    later repurposed into a personal website with gradual additions.
+*/
 var maincolorneutral = "#4e9ac1";
 var maintextcolor = "#E0E0E0";
 

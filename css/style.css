@@ -1,3 +1,12 @@
+/*
+    Hey, you're peeking inside my website!
+    All work in this file is my own, especially the questionable documentation.
+
+    Created by Jacob Ziff in 2024.
+    Originally a final project for SI 339 at the University of Michigan,
+    later repurposed into a personal website with gradual additions.
+*/
+
 /* Old Website Colors */
 /* :root {
     --bg-color: #0F1729;
@@ -24,6 +33,7 @@
     --organizational-color: #FFCB05;
 }
 
+/* General Formatting */
 * {
     background: 0;
     color: var(--main-text-color);
@@ -31,14 +41,12 @@
     font-family: "Titillium Web", sans-serif;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
+/* General Formatting */
 body {
     background-color: var(--bg-color);
 }
 
+/* General Formatting */
 canvas {
     position: fixed;
     width: 100%;
@@ -46,12 +54,14 @@ canvas {
     z-index: -1;
 }
 
+/* General Image Formatting */
 img {
     border: solid 2px var(--main-color-neutral);
     border-radius: 7px;
     margin-bottom: 10px;
 }
 
+/* Sidebar Socials */
 .socialscontainer {
     margin-top: 40px;
     display: grid;
@@ -59,12 +69,14 @@ img {
     width: 50%;
 }
 
+/* Sidebar Socials */
 .socials, .footericon {
     border: 0;
     width: 60%;
     filter: invert(70%);
 }
 
+/* Skip to Main */
 .skip-to-main {
     position: absolute;
     left: -10000px;
@@ -74,83 +86,7 @@ img {
     overflow: hidden;
 }
 
-h1 {
-    font-size: 71px;
-    font-weight: 700;
-    /* font-family: "Noto Sans", sans-serif; */
-    font-family: "Rubik", sans-serif;
-    margin-top: 50px;
-    color: var(--text-heading-color);
-    text-shadow: 0 1px 4px var(--main-color-vibrant);
-}
-
-h2 {
-    font-size: 30px;
-    margin-bottom: 20px;
-    font-weight: 600;
-    color: var(--text-heading-color-2); 
-}
-
-h3 {
-    font-size: 20px;
-    margin-bottom: 15px;
-    font-weight: 500;
-}
-
-p {
-    line-height: 150%;
-    margin-bottom: 10px;
-    margin-right: 4%;
-    font-weight: 300;
-    font-size: large;
-}
-
-#endinfo {
-    font-size: medium;
-    opacity: 0.8;
-}
-
-.selfdescription {
-    font-family: "IBM Plex Serif", serif;
-    font-size: 20px;
-    font-weight: 500;
-}
-
-#aboutinfo {
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: center;
-    justify-items: center;
-}
-
-#aboutinfo > :not(img) {
-    order: 1;
-}
-
-.expinfo1 > h3 {
-    margin-top: 10px;
-}
-
-.expinfo1 > h3 {
-    margin-top: 50px;
-}
-
-.expinfo2 > h3 {
-    margin-top: 20px;
-}
-
-li {
-    font-size: 30px;
-}
-
-.section {
-    padding: 50px 0 50px 0;
-}
-
-header {
-    display: grid;
-}
-
+/* Skip to Main */
 .skip-to-main:focus {
     position: static;
     width: 30%;
@@ -165,6 +101,92 @@ header {
     margin-top: 60px;
 }
 
+/* Only applies to "Jacob Ziff" */
+h1 {
+    font-size: 71px;
+    font-weight: 700;
+    font-family: "Rubik", sans-serif;
+    margin-top: 50px;
+    color: var(--text-heading-color);
+    text-shadow: 0 1px 4px var(--main-color-vibrant);
+}
+
+/* Section headings */
+h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: var(--text-heading-color-2); 
+}
+
+/* Subheadings in each section */
+h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+/* Rest of text */
+p {
+    line-height: 150%;
+    margin-bottom: 10px;
+    margin-right: 4%;
+    font-weight: 300;
+    font-size: large;
+}
+
+/* Copyright text in footer */
+#endinfo {
+    font-size: medium;
+    opacity: 0.8;
+}
+
+/* Text below "Jacob Ziff" */
+.selfdescription {
+    font-family: "IBM Plex Serif", serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* About text and picture */
+#aboutinfo {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+/* About text */
+#aboutinfo > :not(img) {
+    order: 1;
+}
+
+/* Upper part of each previous job */
+.expinfo1 > h3 {
+    margin-top: 50px;
+}
+
+/* Lower part of each previous job */
+.expinfo2 > h3 {
+    margin-top: 20px;
+}
+
+/* Sidebar sections */
+li {
+    font-size: 30px;
+}
+
+/* Each section container */
+.section {
+    padding: 50px 0 50px 0;
+}
+
+/* Don't think this does anything actually */
+header {
+    display: grid;
+}
+
+/* Contact form */
 .formcontainer {
     display: grid;
     grid-template-columns: 1fr;
@@ -173,6 +195,7 @@ header {
     margin-top: 25px;
 }
 
+/* Contact form plus the send button, which isn't actually part of the form */
 .formcontainercontainer {
     display: grid;
     grid-template-columns: 1fr;
@@ -180,31 +203,37 @@ header {
     align-items: center;
 }
 
+/* Each box in the form */
 .formcontainer > * {
     margin-bottom: 20px;
     align-self: center;
 }
 
+/* Name, email, and phone boxes */
 .shortinput {
     height: 70px;
     width: 90%;
     padding: 0 10px;
 }
 
+/* Message box */
 .longinput {
     height: 265px;
     width: 90%;
     padding: 20px 10px;
 }
 
+/* The text inside the actual boxes */
 .shortinput, .longinput {
     font-size: large;
 }
 
+/* The non-message boxes */
 .formshort {
     grid-column: 1 / 2;
 }
 
+/* Invisible labels on boxes for accessibility that can be seen by screen readers */
 .labeldesc {
     clip-path: inset(50%);
     overflow: hidden;
@@ -212,10 +241,12 @@ header {
     white-space: nowrap;
 }
 
+/* The '*' in each invisible label */
 .asterisk {
     font-weight: 600;
 }
 
+/* Contact info submission button */
 button {
     grid-column: 1 / -1;
     justify-self: center;
@@ -227,18 +258,21 @@ button {
     background-color: var(--secondary-bg-color);
 }
 
+/* Contact info submission button */
 button:hover {
     font-weight: 600;
 }
-
+/* Invisible labels again */
 .formlabel {
     font-size: large;
 }
 
+/* Copyright text and footer links */
 footer > * {
     text-align: center;
 }
 
+/* All links on page */
 .sidelink, .footerlink, .projlink, .contactlink {
     font-family: "Arimo", sans-serif;
     text-decoration: none;
@@ -259,14 +293,17 @@ footer > * {
     transition: background-size 400ms;
 }
 
+/* All links on page */
 .sidelink:hover, .footerlink:hover, .projlink:hover, .contactlink:hover {
     background-size: 0 5%, 100% 5%;
 }
 
-.umich:hover {
+/* Organization listed below name */
+.organization:hover {
     color: var(--organizational-color);
 }
 
+/* Contact form boxes */
 input, textarea {
     background-color: var(--secondary-bg-color);
     border-radius: 10px;
@@ -274,24 +311,29 @@ input, textarea {
     border: solid 2px var(--main-color-neutral);
 }
 
+/* Contact form boxes */
 textarea {
     resize: none;
 }
 
+/* Name, title, section links, and socials */
 .sidebar {
     display: flex;
     flex-direction: column;
     z-index: 4;
 }
 
+/* Name, title, section links, and socials */
 .sidebar > * {
     align-self: center;
 }
 
+/* Side bar socials */
 .socialscontainer {
     z-index: 3;
 }
 
+/* Container for icons below contact form */
 .footericonscontainer {
     margin: 50px 0 150px 0;
     display: grid;
@@ -300,14 +342,17 @@ textarea {
     align-items: center;
 }
 
+/* Text for icons below contact form */
 .footericoninfo > p {
     text-align: center;
 }
 
+/* Icons below contact form */
 .footericon {
     width: 30%;
 }
 
+/* Navigation bar which is on the top on mobile and on the side on desktop */
 .navbar {
     display: flex;
     flex-direction: row;
@@ -316,15 +361,18 @@ textarea {
     justify-content: center;
 }
 
+/* Links in navbar */
 .sidelink {
     font-size: 80%;
 }
 
+/* Container for projects in that section */
 .projectscontainer {
     display: flex;
     flex-direction: column;
 }
 
+/* Container for each individual project */
 .proj {
     padding: 20px 0;
     display: grid;
@@ -332,68 +380,90 @@ textarea {
     gap: 10px;
 }
 
+/* The elements of each project */
 .proj > * {
     align-self: center;
     justify-self: center;
 }
 
+/* Spacing from the edge of the screen */
 main {
     margin-left: 5%;
 }
 
+/* Positioning of the mobile navigation bar */
 .navbar {
     left: 5%;
     right: 5%;
     top: 2%;
 }
 
+/* Section containers */
 .proj, .socialscontainer {
     position: relative;
     z-index: 2;
 }
 
+/* Text that appears with invalid contact form submission */
 #formvalidation {
     color: var(--main-color-vibrant);
     font-weight: 500;
 }
 
+/* Project images */
 .lightbox-projects {
     justify-items: center;
 }
 
+/* All of the animations, which won't show up if the user prefers reduced motion */
 @media all and not (prefers-reduced-motion: reduce) {
+
+    /* Scroll */
+    html {
+        scroll-behavior: smooth;
+    }
+
+    /* Image hovering */
     img {
         transition: width 500ms;
     }
 
+    /* Sidebar icon hovering */
     .socials:hover {
         width: 70%;
     }
 
+    /* Bottom icon hovering */
     .footericon:hover {
         width: 40%;
     }
     
+    /* Project image hovering */
     .lightbox-projects > img:hover {
         width: 350px;
     }
 }
 
+/* Desktop-specific styling */
 @media screen and (min-width: 800px) {
 
+    /* Delete the "Home" link, which does not apply on desktop view layout */
     .footerlink:first-child {
         display: none;
     }
 
+    /* Sidebar links */
     .sidelink {
         font-size: 100%;
     }
 
+    /* Put navigation bar back on the side */
     .navbar {
         position: static;
         flex-direction: column;
     }
 
+    /* Change layout of "About" section */
     #aboutinfo {
         display: grid;
         grid-template-columns: 2fr 1.5fr;
@@ -401,15 +471,18 @@ main {
         justify-items: center;
     }
 
+    /* Change layout within "About" section */
     #aboutinfo > * {
         order: 1;
     }
 
+    /* Resize images */
     img {
         width: 60%;
         max-height: 400px;
     }
 
+    /* Style the sidebar to work with the desktop view (which means actually being a sidebar) */
     .sidebar {
         height: 100%;
         width: 35%;
@@ -420,40 +493,48 @@ main {
         overflow-x: hidden;
     }
 
+    /* Style elements in the sidebar */
     .sidebar > * {
         margin-left: 15%;
         align-self: flex-start;
     }
     
+    /* Reduce main space to accommodate side bar */
     main {
         margin-left: 35%;
         padding: 0px 10px;
     }
 
+    /* Reduce footer space to accommodate side bar */
     footer {
         margin-left: 35%;
     }
 
+    /* Change layout of the "Projects" section */
     .proj {
         grid-template-columns: 0.5fr 1fr;
     }
 
+    /* Change layout within "Projects" section */
     .proj > * {
         align-self: center;
         justify-self: left;
         order: 1;
     }
 
+    /* Change layout within "Projects" section */
     .lightbox-projects {
         order: 2;
         grid-column: 1 / -1;
         margin-left: 20%;
     }
 
+    /* Delete "Home" link, which does not apply to desktop layout */
     #mainlink {
         display: none;
     }
 
+    /* Restyle skip to main */
     .skip-to-main:focus {
         position: static;
         height: 30%;
@@ -463,60 +544,75 @@ main {
         padding: 10px 20px;
     }
 
+    /* Change layout within "Contact" section */
     .formcontainer {
         grid-template-columns: 1fr 1fr;
     }
 
+    /* Change layout within "Contact" section */
     .formlong {
         grid-column: 2 / -1;
         grid-row: 1 / 4;
     }
 
+    /* Animations that are different specifically on desktop view */
     @media all and not (prefers-reduced-motion: reduce) {
+        /* Sidebar icon hovering */
         .socials:hover {
             width: 70%;
         }
         
+        /* Project image hovering */
         .lightbox-projects > img:hover {
             width: 70%;
         }
     }
 }
 
+/* Projects-specific styling (the desktop styling does not look good on an intermediate width) */
 @media screen and (min-width: 1200px) {
+    /* General layout */
     .proj {
         grid-template-columns: 0.3fr 0.5fr 1fr;
     }
 
+    /* General ordering */
     .proj > * {
         order: 0;
     }
 
+    /* Image styling */
     .lightbox-projects {
         grid-column: 2 / span 1;
     }
 
+    /* Image styling */
     .lightbox-projects > img {
         width: 80%;
     }
 
+    /* Image styling */
     .lightbox-projects > img:hover {
         width: 90%;
     }
 }
 
+/* Delete motion in animations */
 @media all and (prefers-reduced-motion: reduce) {
+    /* Link hovering animation */
     .sidelink, .footerlink, .projlink, .contactlink {
         transition: background-size 0ms;
     }
 }
 
+/* Footer styling */
 footer {
     z-index: 100;
     height: 400px;
     font-family: "Titillium Web", sans-serif;
 }
 
+/* Possible deletion of Instagram icon, may be implemented in the future */
 /* .footericoninfo:nth-child(2) > * {
     display: none;
 } */
