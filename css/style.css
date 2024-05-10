@@ -1,4 +1,4 @@
-/* Website Colors */
+/* Old Website Colors */
 /* :root {
     --bg-color: #0F1729;
     --secondary-bg-color: #011936;
@@ -8,9 +8,10 @@
     --main-color-vibrant: #4EA5D9;
     --main-color-neutral: #ADD8E6;
     --alternative: #2ECC51;
-    --maize: #FFCB05;
+    --organizational-color: #FFCB05;
 } */
 
+/* New Website Colors */
 :root {
     --bg-color: #010b13;
     --secondary-bg-color: #1E1B18;
@@ -20,7 +21,7 @@
     --main-color-vibrant: #00a1ff;
     --main-color-neutral: #4e9ac1;
     --alternative: #2ECC51;
-    --maize: #FFCB05;
+    --organizational-color: #FFCB05;
 }
 
 * {
@@ -263,7 +264,7 @@ footer > * {
 }
 
 .umich:hover {
-    color: var(--maize);
+    color: var(--organizational-color);
 }
 
 input, textarea {
@@ -515,3 +516,7 @@ footer {
     height: 400px;
     font-family: "Titillium Web", sans-serif;
 }
+
+/* .footericoninfo:nth-child(2) > * {
+    display: none;
+} */
